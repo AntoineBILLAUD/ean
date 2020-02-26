@@ -1,8 +1,9 @@
 <?php
 $ean = '303792016200';
+$eanSize = strlen($ean);
 $somme = 0;
 $reste = 0;
-for ($i = 1; $i <= 12;$i++ ){
+for ($i = 1; $i <= $eanSize;$i++ ){
     if ($i % 2 == 0){
         $somme += intval(substr($ean, $i-1,1))*3;
     }
